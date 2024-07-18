@@ -1,7 +1,7 @@
 [config]
-model="gpt-4-turbo-2024-04-09"
-model_turbo="gpt-4o"
-fallback_models=["gpt-4-0125-preview"]
+model="gpt-3.5-turbo-2024-04-09"
+model_turbo="gpt-3.5"
+fallback_models=["gpt-3.5-0125-preview"]
 git_provider="github"
 publish_output=true
 publish_output_progress=true
@@ -66,7 +66,7 @@ final_update_message = true
 enable_help_text=false
 enable_help_comment=true
 # describe as comment
-publish_description_as_comment=false
+publish_description_as_comment=true
 publish_description_as_comment_persistent=true
 ## changes walkthrough section
 enable_semantic_files_types=true
