@@ -1,7 +1,7 @@
 [config]
-model="gpt-3.5-turbo-2024-04-09"
-model_turbo="gpt-3.5"
-fallback_models=["gpt-3.5-0125-preview"]
+model="gpt-3.5-turbo-0125"
+model_turbo="gpt-3.5-turbo"
+fallback_models=["gpt-3.5-turbo"]
 git_provider="github"
 publish_output=true
 publish_output_progress=true
@@ -66,7 +66,7 @@ final_update_message = true
 enable_help_text=false
 enable_help_comment=true
 # describe as comment
-publish_description_as_comment=true
+publish_description_as_comment=false
 publish_description_as_comment_persistent=true
 ## changes walkthrough section
 enable_semantic_files_types=true
@@ -174,6 +174,13 @@ base_url = "https://api.github.com"
 publish_inline_comments_fallback_with_verification = true
 try_fix_invalid_inline_comments = true
 app_name = "pr-agent"
+
+[github_action_config]
+# auto_review = true    # set as env var in .github/workflows/pr-agent.yaml
+# auto_describe = true  # set as env var in .github/workflows/pr-agent.yaml
+# auto_improve = true   # set as env var in .github/workflows/pr-agent.yaml
+
+[github_app]
 # these toggles allows running the github app from custom deployments
 bot_user = "github-actions[bot]"
 override_deployment_type = true
@@ -197,11 +204,6 @@ push_commands = [
 ]
 ignore_pr_title = []
 ignore_bot_pr = true
-
-[github_action_config]
-# auto_review = true    # set as env var in .github/workflows/pr-agent.yaml
-# auto_describe = true  # set as env var in .github/workflows/pr-agent.yaml
-# auto_improve = true   # set as env var in .github/workflows/pr-agent.yaml
 
 [gitlab]
 # URL to the gitlab service
